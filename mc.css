@@ -1,0 +1,84 @@
+@font-face {
+  font-family: mc-font;
+  src: url(./texture/mc-font.ttf);
+}
+mcpage-preload {
+  position: absolute; top: 0;
+  width: 100vw;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #1D1F21;
+  transition: opacity 1s ease;
+  z-index: 100000;
+}
+mcpage-preload p {
+  padding-top: calc(40vh + 1em);
+  margin-top: 0;
+  animation: loading-blink 1.3s infinite ease-out;
+}
+@keyframes loading-blink {
+  50% { color: transparent; }
+}
+mcpage-preload img {
+  position: fixed;
+  bottom: 60%; left: 50%;
+  transform: translateX(-50%);
+}
+mcpage-preload slot > ul, ::slotted(ul) {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.2em;
+}
+mcpage-preload .left {
+  text-align: start;
+  direction: rtl;
+  width: 50%;
+  float: left;
+}
+mcpage-preload .right {
+  text-align: start;
+  width: 50%;
+  float: right;
+}
+mcpage-preload .progress {
+  line-height: 1rem;
+}
+mcpage-preload progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #555;
+  height: 8px;
+  border: 0;
+  vertical-align: top;
+  transform: translate(0, 0.5rem) translate(0, -50%);
+}
+mcpage-preload progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+mcpage-preload progress::-webkit-progress-value {
+  background-color: #8f8;
+}
+mcpage-preload progress::-moz-progress-bar {
+  background-color: #8f8;
+}
+body {
+  padding: 0;
+  margin: 0;
+  image-rendering: pixelated;
+  height: 100vh;
+  overflow: hidden;
+  background: #1D1F21;
+  color: #DDD;
+  -webkit-touch-callout:none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: mc-font;
+  -webkit-tap-highlight-color: transparent;
+}
