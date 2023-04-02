@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1, minimum-scale=1, user-scalable=no>
   <title>minecraft</title>
   <link id="favicon" rel="icon" href="#" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="./mc.css" />
   <script src="./src/main.js" type="module"></script>
 </head>
 <body>
+  <mcpage-preload>
   <img src="./texture/jumpingBlock.gif" />
   <p>Loading...</p>
   <div class="progress"><progress value="0" max="60"></progress>&emsp;<span class="loadingCount">0</span> / <span class="loadedCount">0</span></div>
@@ -17,5 +17,6 @@
   <div class="right"><slot name="loaded"><ul></ul></slot></div>
   <ul slot="loading"></ul>
   <ul slot="loaded"></ul>
+</mcpage-preload>
 </body>
 </html>
